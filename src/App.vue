@@ -5,8 +5,8 @@
           <h2>{{ pokemon.name }}</h2>
           <img :src="pokemon.imageUrl" :alt="pokemon.name" />
           <p>Weight: {{ pokemon.desc }}</p>
-          <p>Base Experience: {{ pokemon.exp }}</p>
-          <p>Types: {{ pokemon.types.join(', ') }}</p>
+          <p>XP: {{ pokemon.exp }}</p>
+          <p>Type: {{ pokemon.types.join(', ') }}</p>
         </li>
       </ul>
     </div>
@@ -64,6 +64,17 @@ body{
 ul{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+li{
+  border:1px solid white;
+  padding:1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2{
+  text-transform: uppercase;
 }
 img{
   width: 100%;
